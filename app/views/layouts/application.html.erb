@@ -19,7 +19,7 @@
 </nav>
 
 <div class="row" style="height: 800px">
-  <div class="col-lg-1 bg-secondary">
+  <div class="col-lg-1 bg-secondary text-center">
       <br/> <br/>  <br/>   <br/>
     <%= link_to "Nouveau potin", "/gossips/new", :class => "nav-link text-white"%>
         <br/>
@@ -37,14 +37,16 @@
     <li>Paresse</li>
   </ul>
 </div>
-      <br/>
+      <br/><br/><br/><br/><br/>
     <%= link_to "L'équipe", "/equipe/", :class => "nav-link text-white"%>
       <br/>
     <%= link_to "Contactez-nous", "/contact/", :class => "nav-link text-white"%>
   </div>
   <div class="col-lg-9 p-5 mt-5">
     <body>
-    <%= yield %>
+    <div class="container-xxl">
+      <%= yield %>
+    </div>
     </body>
   </div>
 </div>
