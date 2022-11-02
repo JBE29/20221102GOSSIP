@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Gossiptags</h1>
+
+<div id="gossiptags">
+  <% @gossiptags.each do |gossiptag| %>
+    <%= render gossiptag %>
+    <p>
+      <%= link_to "Show this gossiptag", gossiptag %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New gossiptag", new_gossiptag_path %>

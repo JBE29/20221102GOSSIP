@@ -1,0 +1,2 @@
+module GossiptagsHelper
+end
