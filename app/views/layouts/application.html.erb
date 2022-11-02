@@ -9,50 +9,50 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
 
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <div class="navbar-brand">
-      <%= link_to "LANGUE DE P***", "/"%>
-    </div>
-  </li>
-  <div class="d-flex justify-center">
-  <li class="nav-item">
-    <div class="navbar-brand">
-      <%= link_to "Inscription", "/signup"%>
-    </div>
-  </li>
-  <li class="nav-item">
-    <div class="navbar-brand">
-      <%= link_to "Connexion", "/login"%>
-    </div>
-  </li>
-  </div>
-</ul>
+<nav class="nav-tabs bg-primary fixed-top" style="height: 80px;">
+      <%= link_to "LANGUE DE P***", "/", :class => "nav-link text-white"%>
 
-<div class="row">
-  <div class="col-lg-1">
-    <div class="nav-item">
-      <div class="nav-link">
-        <%= link_to "Nouveau potin", "/gossips/new"%>
-      </div>
-    </div>
-    <div class="nav-item">
-      <div class="nav-link">
-        <%= link_to "L'équipe", "/equipe/"%>
-      </div> 
-    </div>
-    <div class="nav-item">
-      <div class="nav-link">
-        <%= link_to "Contactez-nous", "/contact/"%>
-      </div>
-    </div>
+  <div class="d-flex  justify-content-end">
+      <%= link_to "Inscription", "/signup", :class => "nav-link text-white p-3"%>
+      <%= link_to "Connexion", "/login", :class => "nav-link text-white p-3"%>
   </div>
-    <div class="col-lg-9">
-         <body>
+</nav>
+
+<div class="row" style="height: 800px">
+  <div class="col-lg-1 bg-secondary">
+      <br/> <br/>  <br/>   <br/>
+    <%= link_to "Nouveau potin", "/gossips/new", :class => "nav-link text-white"%>
+        <br/>
+<div class="btn-group">
+  <button class="btn btn-secondary  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Catégories
+  </button>
+  <ul class="dropdown-menu">
+    <li>Orgueil</li>
+    <li>Avarice</li>
+    <li>Luxure</li>
+    <li>Envie</li>
+    <li>Gourmandise</li>
+    <li>Colère</li>
+    <li>Paresse</li>
+  </ul>
+</div>
+      <br/>
+    <%= link_to "L'équipe", "/equipe/", :class => "nav-link text-white"%>
+      <br/>
+    <%= link_to "Contactez-nous", "/contact/", :class => "nav-link text-white"%>
+  </div>
+  <div class="col-lg-9 p-5 mt-5">
+    <body>
     <%= yield %>
-  </body>
-    </div>
-
+    </body>
+  </div>
+</div>
+<div class="bg-primary fixed-bottom d-flex justify-content-around">
+<%= link_to "A propos", "/apropos", :class => "nav-link text-white"%>
+<%= link_to "Carrières", "/https://www.pole-emploi.fr/accueil/", :class => "nav-link text-white"%>
+<%= link_to "Pâtés en croute", "/login", :class => "nav-link text-white"%>
+<%= link_to "THP", "https://www.thehackingproject.org/", :class => "nav-link text-white"%>
 </div>
 
 </html>

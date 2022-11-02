@@ -2,9 +2,22 @@
 
 <%= render @gossip %>
 
+
+
 <div>
   <%= link_to "Edit this gossip", edit_gossip_path(@gossip) %> |
   <%= link_to "Back to gossips", gossips_path %>
 
   <%= button_to "Destroy this gossip", @gossip, method: :delete %>
 </div>
+<br/>
+<br/>
+<%#= if @comments != nil %>
+<%#  <div class="d-flex flex-wrap justify-content-center">
+<%#    <%= @comments.reverse_each do |comment| %>
+<%#        <p><%= comment.content %></p><br>
+<%#        <p><%= comment.user.login %></p><br>
+<%#    <% end %>
+<%#</div>
+<%#<% end %>
+

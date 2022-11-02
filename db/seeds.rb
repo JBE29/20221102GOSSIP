@@ -48,5 +48,11 @@ end
         sender_id: User.all.sample.id,
         recipient_id: User.all.sample.id
     )
-   
 end
+
+20.times do
+    Comment.create!{
+        content: Faker::Lorem.paragraph,
+        user_id: User.all.sample.id,
+        gossip_id: Gossip.all.sample.id,
+    }
