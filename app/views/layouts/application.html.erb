@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Jeudigossip</title>
+    <title>L D P***</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,7 +9,50 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
 
-  <body>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <div class="navbar-brand">
+      <%= link_to "LANGUE DE P***", "/"%>
+    </div>
+  </li>
+  <div class="d-flex justify-center">
+  <li class="nav-item">
+    <div class="navbar-brand">
+      <%= link_to "Inscription", "/signup"%>
+    </div>
+  </li>
+  <li class="nav-item">
+    <div class="navbar-brand">
+      <%= link_to "Connexion", "/login"%>
+    </div>
+  </li>
+  </div>
+</ul>
+
+<div class="row">
+  <div class="col-lg-1">
+    <div class="nav-item">
+      <div class="nav-link">
+        <%= link_to "Nouveau potin", "/gossips/new"%>
+      </div>
+    </div>
+    <div class="nav-item">
+      <div class="nav-link">
+        <%= link_to "L'équipe", "/equipe/"%>
+      </div> 
+    </div>
+    <div class="nav-item">
+      <div class="nav-link">
+        <%= link_to "Contactez-nous", "/contact/"%>
+      </div>
+    </div>
+  </div>
+    <div class="col-lg-9">
+         <body>
     <%= yield %>
   </body>
+    </div>
+
+</div>
+
 </html>

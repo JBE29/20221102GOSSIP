@@ -1,5 +1,11 @@
 <div id="<%= dom_id gossip %>">
+
   <p>
+    <strong>Author : </strong>
+    <%= link_to @gossip.user.login, "/user/#{@gossip.user.id}" %>
+
+  </p>
+  <p> 
     <strong>Title:</strong>
     <%= gossip.title %>
   </p>
