@@ -5,7 +5,13 @@
 <br/>
 <div id="gossips">
   <% @gossips.each do |gossip| %>
-    <%= render gossip %>
+  <div id="<%= dom_id gossip %>" class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= gossip.title %></h5>
+    <p class="card-text"><%= gossip.content %></p> 
+  </div>
+</div>
+
     <p>
       <%= link_to "Show this gossip", gossip %>
     </p>

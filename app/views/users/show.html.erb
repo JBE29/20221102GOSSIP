@@ -2,7 +2,12 @@
 
 <%= render @user %>
 
-<div>
+<p>
+  <strong>Mot de passe:</strong>
+  <%= user.password %>
+</p>
+
+<div>  
   <%= link_to "Edit this user", edit_user_path(@user) %> |
   <%= link_to "Back to users", users_path %>
 

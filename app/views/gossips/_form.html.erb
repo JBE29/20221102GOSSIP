@@ -11,19 +11,20 @@
     </div>
   <% end %>
 <br>
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+
+<div class="mb-2">
+    <%= form.label :Titre, style: "display: block", :class =>"form-label" %>
+    <%= form.text_field :title, :class =>"form-control", :rows =>"3" %>
   </div>
 <br>
-  <div>
-    <%= form.label :pseudo, style: "display: block" %>
-    <%= form.text_field :login %>
+  <div class="mb-3">
+    <%= form.label :pseudo, style: "display: block", :class =>"form-label" %>
+    <%= form.text_field :pseudo, :class =>"form-control", :rows =>"3" %>
   </div>
 
-  <div>
-    <%= form.label :content, style: "display: block" %>
-    <%= form.text_area :content %>
+  <div class="mb-3">
+    <%= form.label :content, style: "display: block", :class =>"form-label"  %>
+    <%= form.text_area :content, :class =>"form-control", :rows =>"3" %>
   </div>
 
   <div>

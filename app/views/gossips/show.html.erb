@@ -1,7 +1,8 @@
-<p style="color: green"><%= notice %></p>
+
 
 <%= render @gossip %>
 
+</div>
 
 
 <div>
@@ -13,11 +14,13 @@
 <br/>
 <br/>
 
-
-<%#= render Comment.show %>
-    <%#= @comments.reverse_each do |comment| %>
-        <p><%#= comment.content %></p><br>
-        <p><%#= comment.user.login %></p><br>
-    <%# end %>
-
-
+<h3>Commentaires</h3>
+<% @gossip.comments.sort.each do |comment| %>
+      <h5 class="card-title"><%= comment.content %></h5>
+      <p class="card-text">Écrit par: <%= link_to "#{comment.user.first_name}", user_path(comment.user.id) %></p>
+      <%# if current_user %>
+        <%# if current_user.id == comment.user_id %>
+          <%#= button_to "Modifier ou supprimer ce commentaire", edit_gossip_comment_path(@gossip.id, comment.id), :method => "get" %>
+        <%# end %>    
+      <%# end %>
+<% end %>

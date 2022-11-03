@@ -3,6 +3,6 @@ class User < ApplicationRecord
     has_many :received_messages, foreign_key: "recipient_id", class_name: "PrivateMessage"
     has_many :gossips
     has_many :comments, dependent: :destroy
-    belongs_to :city
+    #belongs_to :city
     has_secure_password
 end

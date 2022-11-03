@@ -1,18 +1,9 @@
-<div id="<%= dom_id gossip %>">
-  <p>
-    <strong>Author : </strong>
-    <%#= link_to "#{gossip.user.login}", user_path(gossip.user.id) %>
-    
-
-  </p>
-  <p> 
-    <strong>Title:</strong>
-    <%= gossip.title %>
-  </p>
-
-  <p>
-    <strong>Content:</strong>
-    <%= gossip.content %>
-  </p>
-
+<div id="<%= dom_id gossip %>" class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= gossip.title %></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><%#= link_to "#{gossip.user.login}", user_path(gossip.user.id) %></h6>
+    <p class="card-text"><%= gossip.content %></p>
+  </div>
 </div>
+
+    
