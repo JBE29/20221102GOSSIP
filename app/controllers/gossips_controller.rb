@@ -1,5 +1,5 @@
 class GossipsController < ApplicationController
-  before_action :set_gossip, only: %i[ show edit update destroy ]
+  before_action :authenticate_user, only: [:new, :edit, :show]
 
   # GET /gossips or /gossips.json
   def index
@@ -21,7 +21,7 @@ class GossipsController < ApplicationController
 
   # POST /gossips or /gossips.json
   def create
-    @gossip = Gossip.new('user' => current_user, 'title' => params[:title],'content' => params[:content])
+    @gossip = Gossip.new('user_id' => current_user.id, 'title' => params[:title],'content' => params[:content])
  
 
     if @gossip.save
@@ -63,6 +63,10 @@ class GossipsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def gossip_params
+      params.require(:gossip).permit(:title, :content)
+    end
+
+    def update_params
       params.require(:gossip).permit(:title, :content)
     end
 end

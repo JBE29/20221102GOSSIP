@@ -24,8 +24,9 @@ class UsersController < ApplicationController
     @user = User.new(first_name:params[:first_name], last_name:params[:last_name], 
     age:params[:age], description:params[:description], email:params[:email], 
     password:params[:password], 
-    password_confirmation:params[:password_confirmation], city: City.all.sample)
+    password_confirmation:params[:password_confirmation])
     if @user.save
+      session[:user_id] = @user.id
       flash[:notice] = "Vous allez recevoir un email de confirmation."
       redirect_to root_path
     else
@@ -68,9 +69,5 @@ class UsersController < ApplicationController
       params.require(:user).permit(:first_name, :last_name, :description, :email, :age)
     end
 
-    def cities_list
-      cities =[]
-      City.all.each {|city| cities << city}
-      return cities
-    end
+
 end

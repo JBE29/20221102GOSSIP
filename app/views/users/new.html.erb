@@ -32,25 +32,25 @@
       <small id="emailHelp" class="form-text text-muted">Ton adresse mail peux fonctionner même en dehors de la planète terre.</small>
     </div>
 
-    </br>
+    <br>
 
     <div class="form-group">
       <%= label_tag 'Password', name = 'Mot de passe' , class: 'font-weight-bold'%>
       <%= password_field_tag 'password', nil, placeholder: 'Choisi un mot de passe', class: 'form-control'%>
-      <small id="emailHelp" class="form-text text-muted"> Avec 6 caractères minimum.</small>
+      <small id="emailHelp" class="form-text text-muted"> Avec  caractères minimum.</small>
     </div>
 
-    </br>
+    <br>
     
     <div class="form-group">
       <%= label_tag 'Password confirmation', name = 'Confirmation mot de passe' , class: 'font-weight-bold'%>
       <%= password_field_tag 'password_confirmation', nil, placeholder: 'Confirme ton mot de passe', class: 'form-control'%>
-      <small id="emailHelp" class="form-text text-muted">Avec 6 caractères minimum.</small>
+      <small id="emailHelp"></small>
       </div>
 
-    </br>
-    </br>
+    <br>
+    <br>
 
-    <%= submit_tag "Se transformer ", class: 'btn btn-primary' %>
+    <%= submit_tag "J'accepte les CGU sans réserves", class: 'btn btn-secondary' %>
   <% end %>
 </div>

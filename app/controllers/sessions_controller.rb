@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       if user && user.authenticate(password: params[:password])
         session[:user_id] = user.id
         # redirige où tu veux, avec un flash ou pas
-        redirect_to root_path, success: "Bienvenue #{session[:pseudo]}"
+        redirect_to root_path, success: "Bienvenue "
       else
         redirect_to new_session_path, notice: 'Invalid email/password combination'
       end
