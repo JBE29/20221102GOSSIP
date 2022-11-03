@@ -7,20 +7,28 @@
 
 <div>
   <%= link_to "Edit this gossip", edit_gossip_path(@gossip) %> |
-  <%= link_to "Back to gossips", gossips_path %>
-
-  <%= button_to "Destroy this gossip", @gossip, method: :delete %>
+  <%= link_to "Back to gossips", gossips_path %> |
+  <%= link_to "Destroy this gossip", @gossip, method: :delete %>
 </div>
 <br/>
 <br/>
 
-<h3>Commentaires</h3>
+<h5>Commentaires</h>
 <% @gossip.comments.sort.each do |comment| %>
-      <h5 class="card-title"><%= comment.content %></h5>
-      <p class="card-text">Écrit par: <%= link_to "#{comment.user.first_name}", user_path(comment.user.id) %></p>
-      <%# if current_user %>
-        <%# if current_user.id == comment.user_id %>
-          <%#= button_to "Modifier ou supprimer ce commentaire", edit_gossip_comment_path(@gossip.id, comment.id), :method => "get" %>
-        <%# end %>    
-      <%# end %>
+  <h6 class="card-title"><%= comment.content %></h6>
+  <p class="card-text">Écrit par: <%= link_to "#{comment.user.first_name}", user_path(comment.user.id) %></p>    
 <% end %>
+
+<%#= form_for ([@gossip, @gossip.comments.build]) do |f| %>
+        
+  <div class="form-group", style="flex: 3">
+    <h5>Ecrire un commentaire: </h5>
+    <%#= f.text_area :content, class:"form-control"%>
+  </div>
+
+  <div class="form-group" , style="flex: 1">
+    <div class="actions">
+      <%#= f.submit "Commenter", class: "btn btn-secondary d-inline-flex justify-content-center"%>
+    </div>
+  </div>
+<%# end %>

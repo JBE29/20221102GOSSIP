@@ -21,11 +21,11 @@ end
     User.create!(
         first_name: Faker::Name.first_name,
         last_name: Faker::Name.last_name, 
-        login: Faker::Music::Hiphop.artist,
         description: Faker::Games::Pokemon.move,
         email: Faker::Internet.email,
         age: Faker::Number.between(from: 7, to: 77),
-        city_id: City.all.sample.id
+        city_id: City.all.sample.id,
+        password: Faker::Hobby.activity
     )
 end
 

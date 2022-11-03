@@ -2,10 +2,55 @@
 <br>
 <p> Cette inscription te donnera accès aux commentaires et aux messages privés.</p>
 
-<%= render "form", user: @user %>
+  <%= form_tag url_for(action: 'create'), method: "post" do %>
+  <div class = "row">
+    <div class="form-group col">
+      <%= label_tag 'First_name', name = 'Prénom', class: 'font-weight-bold'%>
+      <%= text_field_tag 'first_name', nil, placeholder: 'Exemple : Gontran', class: 'form-control'%>
+    </div>
 
-<br>
+    <div class="form-group col">
+      <%= label_tag 'Last Name', name = 'Nom', class: 'font-weight-bold'%>
+      <%= text_field_tag 'last_name', nil, placeholder: 'Exemple : Dupont de Ligonnes', class: 'form-control'%>
+    </div>
+</div>
 
-<div>
-  <%= link_to "Back to users", users_path %>
+    <div class="form-group">
+      <%= label_tag 'Age', name = 'Age', class: 'font-weight-bold'%>
+      <%= text_field_tag 'age', nil, placeholder: '', class: 'form-control'%>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag 'Description', name = 'Description', class: 'font-weight-bold'%>
+      <%= text_area_tag 'description', nil,rows: 3, placeholder: '', class: 'form-control'%>
+      <small id="emailHelp" class="form-text text-muted">500 caracters max.</small>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag 'Email', name = 'Email', class: 'font-weight-bold'%>
+      <%= text_field_tag 'email', nil, placeholder: 'Ecrit nous ton adresse mail :)', class: 'form-control'%>
+      <small id="emailHelp" class="form-text text-muted">Ton adresse mail peux fonctionner même en dehors de la planète terre.</small>
+    </div>
+
+    </br>
+
+    <div class="form-group">
+      <%= label_tag 'Password', name = 'Mot de passe' , class: 'font-weight-bold'%>
+      <%= password_field_tag 'password', nil, placeholder: 'Choisi un mot de passe', class: 'form-control'%>
+      <small id="emailHelp" class="form-text text-muted"> Avec 6 caractères minimum.</small>
+    </div>
+
+    </br>
+    
+    <div class="form-group">
+      <%= label_tag 'Password confirmation', name = 'Confirmation mot de passe' , class: 'font-weight-bold'%>
+      <%= password_field_tag 'password_confirmation', nil, placeholder: 'Confirme ton mot de passe', class: 'form-control'%>
+      <small id="emailHelp" class="form-text text-muted">Avec 6 caractères minimum.</small>
+      </div>
+
+    </br>
+    </br>
+
+    <%= submit_tag "Se transformer ", class: 'btn btn-primary' %>
+  <% end %>
 </div>

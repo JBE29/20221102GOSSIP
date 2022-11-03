@@ -21,8 +21,8 @@ class GossipsController < ApplicationController
 
   # POST /gossips or /gossips.json
   def create
-    @gossip = Gossip.create(gossip_params)
-    @gossip.user = User.find_by(id: session[:user_id])
+    @gossip = Gossip.new('user' => current_user, 'title' => params[:title],'content' => params[:content])
+ 
 
     if @gossip.save
       flash[:success] = "Potin bien créé !"
