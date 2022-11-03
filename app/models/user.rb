@@ -4,4 +4,5 @@ class User < ApplicationRecord
     has_many :gossips
     has_many :comments, dependent: :destroy
     belongs_to :city
+    has_secure_password
 end

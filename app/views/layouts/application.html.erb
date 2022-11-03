@@ -13,30 +13,30 @@
       <%= link_to "LANGUE DE P***", "/", :class => "nav-link text-white"%>
 
   <div class="d-flex  justify-content-end">
-      <%= link_to "Inscription", "/signup", :class => "nav-link text-white p-3"%>
+      <%= link_to "Inscription", "/users/new", :class => "nav-link text-white p-3"%>
       <%= link_to "Connexion", "/login", :class => "nav-link text-white p-3"%>
   </div>
 </nav>
 
-<div class="row" style="height: 800px">
+<div class="row" style="height: 1000px">
   <div class="col-lg-1 bg-secondary text-center">
       <br/> <br/>  <br/>   <br/>
     <%= link_to "Nouveau potin", "/gossips/new", :class => "nav-link text-white"%>
         <br/>
-<div class="btn-group">
-  <button class="btn btn-secondary  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Catégories
-  </button>
-  <ul class="dropdown-menu">
-    <li>Orgueil</li>
-    <li>Avarice</li>
-    <li>Luxure</li>
-    <li>Envie</li>
-    <li>Gourmandise</li>
-    <li>Colère</li>
-    <li>Paresse</li>
-  </ul>
-</div>
+    <div class="btn-group">
+      <button class="btn btn-secondary  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Catégories
+      </button>
+      <ul class="dropdown-menu">
+        <li>Orgueil</li>
+        <li>Avarice</li>
+        <li>Luxure</li>
+        <li>Envie</li>
+        <li>Gourmandise</li>
+        <li>Colère</li>
+        <li>Paresse</li>
+      </ul>
+    </div>
       <br/><br/><br/><br/><br/>
     <%= link_to "L'équipe", "/equipe/", :class => "nav-link text-white"%>
       <br/>
@@ -44,17 +44,19 @@
   </div>
   <div class="col-lg-9 p-5 mt-5">
     <body>
-    <div class="container-xxl">
-      <%= yield %>
-    </div>
+      <div class="container-xxl">
+        <%= yield %>
+      </div>
     </body>
   </div>
 </div>
-<div class="bg-primary fixed-bottom d-flex justify-content-around">
-<%= link_to "A propos", "/apropos", :class => "nav-link text-white"%>
-<%= link_to "Carrières", "/https://www.pole-emploi.fr/accueil/", :class => "nav-link text-white"%>
-<%= link_to "Pâtés en croute", "/login", :class => "nav-link text-white"%>
-<%= link_to "THP", "https://www.thehackingproject.org/", :class => "nav-link text-white"%>
-</div>
 
+<footer>
+  <div class="bg-primary fixed-bottom d-flex justify-content-around">
+    <%= link_to "A propos", "/apropos", :class => "nav-link text-white"%>
+    <%= link_to "Carrières", "/https://www.pole-emploi.fr/accueil/", :class => "nav-link text-white"%>
+    <%= link_to "Pâtés en croute", "/login", :class => "nav-link text-white"%>
+    <%= link_to "THP", "https://www.thehackingproject.org/", :class => "nav-link text-white"%>
+  </div>
+</footer>
 </html>

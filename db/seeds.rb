@@ -6,6 +6,7 @@ Gossip.destroy_all
 Tag.destroy_all
 PrivateMessage.destroy_all
 Gossiptag.destroy_all
+Comment.destroy_all
 
 
 
@@ -50,9 +51,10 @@ end
     )
 end
 
-20.times do
-    Comment.create!{
+5.times do
+    com = Comment.create!(
         content: Faker::Lorem.paragraph,
         user_id: User.all.sample.id,
         gossip_id: Gossip.all.sample.id,
-    }
+    )
+end

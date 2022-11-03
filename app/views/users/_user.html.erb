@@ -1,12 +1,28 @@
 <div id="<%= dom_id user %>">
   <p>
-    <strong>First name:</strong>
+    <strong>Nom:</strong>
     <%= user.first_name %>
   </p>
 
   <p>
-    <strong>Last name:</strong>
+    <strong>Prénom:</strong>
     <%= user.last_name %>
+  </p>
+
+  <p>
+    <strong>Pseudo:</strong>
+    <%= user.login %>
+  </p>
+
+  <p>
+    <strong>Mot de passe:</strong>
+    <%= user.password %>
+  </p>
+
+  <p>
+    <strong>Ville:</strong>
+    <%#= user.city.name %>
+
   </p>
 
   <p>
