@@ -2,10 +2,9 @@ Rails.application.routes.draw do
   resources :likes
   resources :comments
   root 'gossips#index'
-  get '/contact', to: 'static_page#contact'
-  get '/equipe', to: 'static_page#team'
 
-  resources :gossiptags
+  resources :team
+  resources :contact
   resources :private_messages
   resources :tags
   resources :gossips
